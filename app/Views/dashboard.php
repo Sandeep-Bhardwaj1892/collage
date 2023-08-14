@@ -14,16 +14,16 @@
     </tr>
   </thead>
   <tbody>
-    <?php //  foreach($usersdata as $key=>$val) { ?>
+    <?php   foreach($usersdata as $key=>$val) { ?>
     <tr>
-      <th> <?php// echo $val['id'] ?> </th>
-      <td> <?php// echo $val['firstname'] ?> </td>
-      <td><?php //echo $val['lastname'] ?></td>
-      <td><?php //echo $val['email'] ?></td>
-      <td><?php //echo $val['phone'] ?></td>
-      <th><a href="">Edit</a> | <a href="">Delete</a></th>
+      <th> <?php echo $val['id'] ?> </th>
+      <td> <?php echo $val['firstname'] ?> </td>
+      <td><?php echo $val['lastname'] ?></td>
+      <td><?php echo $val['email'] ?></td>
+      <td><?php echo $val['phone'] ?></td>
+      <th><a href="#">Edit</a> | <a href="#">Delete</a></th>
     </tr>
-    <?php // } ?>
+    <?php  } ?>
     
    
   </tbody>

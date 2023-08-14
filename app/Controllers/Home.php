@@ -218,7 +218,11 @@ class Home extends BaseController
 
     public function dashboard()
     {  
-        return view('dashboard');
+
+      $model = new SignupModel();
+      $data['usersdata'] = $model->findAll();
+      //print_r($data);
+        return view('dashboard',$data);
     }
 
 
