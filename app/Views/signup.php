@@ -29,14 +29,14 @@
             <div class="row">
               <div class="col-md-6 mb-3">
                 <label for="firstName">First name</label>
-                <input type="text" name="firstname" class="form-control" id="" placeholder="First Name" value="" required="">
+                <input type="text" name="firstname" class="form-control" id="" placeholder="First Name" value="<?php set_value('firstname')?>" required="">
                 <div class="invalid-feedback">
                   Valid first name is required.
                 </div>
               </div>
               <div class="col-md-6 mb-3">
                 <label for="lastName">Last name</label>
-                <input type="text" name="lastname" class="form-control" id="lastName" placeholder="last Name" value="" required="">
+                <input type="text" name="lastname" class="form-control" id="lastName" placeholder="last Name" value="<?php set_value('lastname')?>" required="">
                 
               </div>
             </div>
@@ -45,13 +45,13 @@
               <div class="row">
             <div class="mb-3 col-md-6">
               <label for="email">Email </label>
-              <input type="email" name="email" class="form-control" id="email" placeholder="example@gmail.com">
+              <input type="email" name="email" class="form-control" id="email" value="<?php set_value('email')?>" placeholder="example@gmail.com">
               
             </div>
 
             <div class="mb-3 col-md-6">
               <label for="address">Phone No</label>
-              <input type="text" name="phone" class="form-control" id="" placeholder="Phone No" required="">
+              <input type="text" name="phone" class="form-control" id="" value="<?php set_value('phone')?>" placeholder="Phone No" required="">
              
             </div>
             </div>
@@ -73,7 +73,7 @@
 
             <div class="mb-3">
               <label for="address">Address</label>
-              <input type="text" name="address" class="form-control" id="" placeholder="Address">
+              <input type="text" name="address" class="form-control" id="" value="<?php set_value('firstname')?>" placeholder="Address">
             </div>
 
             <div class="row">

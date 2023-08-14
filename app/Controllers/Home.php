@@ -95,7 +95,8 @@ class Home extends BaseController
         $rules=[
           'firstname'=>  'required',
           'lastname'=>  'required',
-          'email'=> 'required|valid_email',
+          //'email'=> 'required|valid_email',
+          'email'=> 'required|valid_email|is_unique[signup.email]',
           'phone'=> 'required|min_length[1]',
           'password'=> 'required|min_length[1]',
           'confirmpassword'=> 'matches[password]',
