@@ -114,13 +114,65 @@
 
 <hr class="featurette-divider">
 <div class="row featurette">
+<div class="card-deck">
+  <div class="card">
+    <img class="card-img-top" src="<?php echo base_url('public/pic/image1.jpg');?>" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="<?php echo base_url('public/pic/image2.jpg');?>" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="<?php echo base_url('public/pic/image5.jpg');?>" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="<?php echo base_url('public/pic/image4.jpg');?>" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+</div>
+        <hr class="featurette-divider">
+        </div>
+
+
+
+
+        <div class="container">
+
+<hr class="featurette-divider">
+<div class="row featurette">
           <div class="col-md-5 ">
             <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
             <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
           </div>
           <div class="col-md-7">
              <!-- <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" style="width: 500px; height: 500px;" src="<?php echo base_url('public/pic/picture30.jpg');?>" data-holder-rendered="true"> -->
-             <img src="<?php echo base_url('public/pic/picture12.jpg');?>" height="400px" width="750px" alt="">
+             <img src="<?php echo base_url('public/pic/picture12.jpg');?>" height="400px" width="630px" alt="">
             </div>
         </div>
 
@@ -133,7 +185,7 @@
           </div>
           <div class="col-md-7 order-md-1">
             <!-- <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" style="width: 500px; height: 500px;" src="<?php echo base_url('public/pic/picture30.jpg');?>" data-holder-rendered="true"> -->
-            <img src="<?php echo base_url('public/pic/picture13.jpg');?>" height="400px" width="646px" alt="">
+            <img src="<?php echo base_url('public/pic/picture13.jpg');?>" height="400px" width="630px" alt="">
           </div>
         </div>
         <hr class="featurette-divider">

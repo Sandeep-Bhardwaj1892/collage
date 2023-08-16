@@ -25,9 +25,7 @@
          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
   Edit
 </button> | 
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Delete
-</button>
+<button type="button" class="btn btn-primary" >  Delete</button>
 </th>
     </tr>
     <?php  } ?>
@@ -45,61 +43,79 @@
   Launch demo modal
 </button> -->
 
-<!-- Modal -->
+<!----------- Modal -->
+<section>
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Edit Signup page</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        ...
+        <!---------- edit user -->
+        <form action="<?php base_url('/signup');?>" method="post">
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="firstName">First name</label>
+                <input type="text" name="firstname" class="form-control" id="" placeholder="First Name" value="" required="">
+                
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="lastName">Last name</label>
+                <input type="text" name="lastname" class="form-control" id="lastName" placeholder="last Name" value="" required="">
+                
+              </div>
+            </div>
+
+           
+              <div class="row">
+            <div class="mb-3 col-md-6">
+              <label for="email">Email </label>
+              <input type="email" name="email" class="form-control" id="email" value="" placeholder="example@gmail.com">
+              
+            </div>
+
+            <div class="mb-3 col-md-6">
+              <label for="address">Phone No</label>
+              <input type="text" name="phone" class="form-control" id="" value="" placeholder="Phone No" required="">
+             
+            </div>
+            </div>
+
+           
+
+
+            <div class="mb-3">
+              <label for="address">Address</label>
+              <input type="text" name="address" class="form-control" id="" value="" placeholder="Address">
+            </div>
+
+           
+           
+            <hr class="mb-4 ">
+            <button class="btn btn-primary  " type="submit">Save </button>
+          </form>
+        <!------------------------- edit user -->
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
+       
     </div>
   </div>
 </div>
+</section>
 <!-- Button edit user model -->
 
-<!-- button delete userr model -->
 
-<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Launch demo modal
-</button> -->
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- button delete userr model -->
+<div><p>This user information table show</p></div>
 
 
+  
 
-    <div class="container-fluid">
-
-
+<div class="container-fluid">
 
 <hr class="featurette-divider">
 <div class="row featurette">
@@ -109,7 +125,7 @@
           </div>
           <div class="col-md-7">
              <!-- <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" style="width: 500px; height: 500px;" src="<?php echo base_url('public/pic/picture30.jpg');?>" data-holder-rendered="true"> -->
-             <img src="<?php echo base_url('public/pic/picture12.jpg');?>" height="400px" width="750px" alt="">
+             <img src="<?php echo base_url('public/pic/picture12.jpg');?>" height="400px" width="630px" alt="">
             </div>
         </div>
 
