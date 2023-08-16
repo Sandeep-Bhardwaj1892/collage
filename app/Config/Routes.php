@@ -37,6 +37,8 @@ $routes->match(['get','post'],'register','Home::register');
 $routes->match(['get','post'],'signup','Home::signup');
 $routes->match(['get','post'],'dashboard','Home::dashboard');
 $routes->match(['get','post'],'login','Login::index');
+$routes->match(['get','post'],'edit','Home::edit');
+
 
 /*
  * --------------------------------------------------------------------

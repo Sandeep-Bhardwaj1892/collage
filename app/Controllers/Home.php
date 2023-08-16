@@ -226,6 +226,14 @@ class Home extends BaseController
         return view('dashboard',$data);
     }
 
+    public function edit()
+    {  
+
+      
+      
+        return view('edit');
+    }
+
 
 
 }
