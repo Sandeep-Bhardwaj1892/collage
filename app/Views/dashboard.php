@@ -1,15 +1,27 @@
+
+
 <?php echo view('includes/header');?>
-    
+       
+      
+        
+
+   
     <div class=" container col-md-12 ">
-    
-    <table class="table table-hover ">
-  <thead>
+
+
+
+
+        
+    <table class="table table-hover table-sm " id="example" style="width:100%">
+    <!-- <table id="example" class="table table-striped table-bordered" style="width:100%"> -->
+  <thead class="thead-dark">
     <tr >
       <th scope="col">User Id</th>
       <th scope="col">First Name</th>
       <th scope="col">Last Name</th>
       <th scope="col">Email</th>
       <th scope="col">Phone</th>
+      <th scope="col">Address</th>
       <th scope="col">Action</th>
     </tr>
   </thead>
@@ -21,17 +33,30 @@
       <td><?php echo $val['lastname'] ?></td>
       <td><?php echo $val['email'] ?></td>
       <td><?php echo $val['phone'] ?></td>
+      <td><?php echo $val['address'] ?></td>
       <th>
-         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+         <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
   Edit
-</button> | 
-<button type="button" class="btn btn-primary" >  Delete</button>
+</button> |  -->
+<button type="button" class="btn btn-light" > <a href="<?php  echo base_url();?>edit/<?php  echo $val['id'] ?>">Edit</a> </button> | 
+<button type="button" class="btn btn-light " > <a  onclick="return confirm('Are you sure want to delete this record')"  href="<?php // echo base_url();?>delete/<?php // echo $val['id'] ?>">Delete</a> </button>
 </th>
     </tr>
     <?php  } ?>
     
    
   </tbody>
+  <thead class="thead-secondary ">
+    <tr >
+      <th scope="col">User Id</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Address</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
 </table>
    
      
@@ -44,7 +69,7 @@
 </button> -->
 
 <!----------- Modal -->
-<section>
+ <!-- <section>
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -54,63 +79,41 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">
-        <!---------- edit user -->
-        <form action="<?php base_url('/signup');?>" method="post">
+      <div class="modal-body"> 
+       
+
+        <form  method="post">
             <div class="row">
               <div class="col-md-6 mb-3">
                 <label for="firstName">First name</label>
-                <input type="text" name="firstname" class="form-control" id="" placeholder="First Name" value="" required="">
+                <input type="text" name="firstname" class="form-control" id="" placeholder="First Name" value="<?php //  echo $userdata['firstname'];?>" required="">
                 
               </div>
               <div class="col-md-6 mb-3">
                 <label for="lastName">Last name</label>
-                <input type="text" name="lastname" class="form-control" id="lastName" placeholder="last Name" value="" required="">
+                <input type="text" name="lastname" class="form-control" id="lastName" placeholder="last Name" value="<?php // echo $userdata['lastname'];?>" required="">
                 
               </div>
             </div>
-
-           
-              <div class="row">
-            <div class="mb-3 col-md-6">
-              <label for="email">Email </label>
-              <input type="email" name="email" class="form-control" id="email" value="" placeholder="example@gmail.com">
-              
-            </div>
-
-            <div class="mb-3 col-md-6">
-              <label for="address">Phone No</label>
-              <input type="text" name="phone" class="form-control" id="" value="" placeholder="Phone No" required="">
-             
-            </div>
-            </div>
-
-           
-
-
-            <div class="mb-3">
-              <label for="address">Address</label>
-              <input type="text" name="address" class="form-control" id="" value="" placeholder="Address">
-            </div>
-
-           
-           
+      
+                          
             <hr class="mb-4 ">
             <button class="btn btn-primary  " type="submit">Save </button>
           </form>
-        <!------------------------- edit user -->
-      </div>
+    
+       
+       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
        
     </div>
   </div>
 </div>
-</section>
+</section>  -->
 <!-- Button edit user model -->
 
 
-<div><p>This user information table show</p></div>
+
 
 
   

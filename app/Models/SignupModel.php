@@ -9,7 +9,7 @@ class SignupModel extends Model
     protected $table      = 'signup';
     protected $allowedFields = ['id','firstname','lastname', 'email','phone','password','address','country','state','pin','created_at','updated_at'];
     protected $beforeInsert   = ['beforeInsert'];
-    protected $beforeUpdate   = ['beforeUpdate '];
+   // protected $beforeUpdate   = ['beforeUpdate '];
     protected $primaryKey = 'id';
 
 
@@ -22,13 +22,13 @@ class SignupModel extends Model
     }
 
 
-    protected function beforeUpdate(array $data)
-    {
-        $data = $this->passwordHash($data);
-        $data['data']['updated_at'] = date('y-m-d H:i:s');
+    // protected function beforeUpdate(array $data)
+    // {
+    //     $data = $this->passwordHash($data);
+    //     $data['data']['updated_at'] = date('y-m-d H:i:s');
 
-        return $data;
-    }
+    //     return $data;
+    // }
 
 
     protected function passwordHash(array $data)

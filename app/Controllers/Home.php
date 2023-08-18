@@ -25,7 +25,7 @@ class Home extends BaseController
 
         if(!$this->validate($rules,$errors))
          {
-          $data['validatoin'] = $this->validator;
+          $data['validation'] = $this->validator;
          }
          else
          {
@@ -33,20 +33,25 @@ class Home extends BaseController
            $model = new SignupModel();
        
            $admin = $model->where('email',$this->request->getVar('email'))->first();
+           
          
-         //print_r($admin); exit;
-
+          // print_r($admin); exit;
+               if($admin)
+               {
+                
+                return redirect()->to ('dashboard');
+               }
                   
             // if($this->verifyMypassword($this->request->gatVar('password'),$admin['password']))
             //  {
             //    $this->setUserSession($admin);
-            //    return redirect()->to('dashborad');
+            //    return redirect()->to ('dashboard');
             //  }
-            //   else
-            //   {
-            //    $data['Flash_message']= TRUE;
+              else
+               {
+                $data['Flash_message']= TRUE;
 
-            // }
+               }
          }
 
 
@@ -224,14 +229,74 @@ class Home extends BaseController
       $data['usersdata'] = $model->findAll();
       //print_r($data);
         return view('dashboard',$data);
+       
     }
 
-    public function edit()
+    
+    public function edit($id)
     {  
 
+      $model = new SignupModel();
+      if($this->request->getMethod()=='post')
+      {
+
+        $newData=[
+           
+          'firstname' => $this->request->getVar('firstname'),
+          'lastname' => $this->request->getVar('lastname'),
+          'email' => $this->request->getVar('email'),
+          'phone' => $this->request->getVar('phone'),
+          'address' => $this->request->getVar('address'),
+             
+        ]; 
+
+        if($model->update($id,$newData))
+        {
+         
+          return redirect()->to ('dashboard');
+         // $data['Flash_message']= TRUE;
+        }
+
+      }
+      //echo $id; exit;
+
+       
+       $data['userdata'] = $model->where('id',$id)->first();
+       //print_r($data);
+        return view('edit',$data);
+    }
+   
+
+
+
       
+    public function delete($id)
+    {  
+
+      $model = new SignupModel();
       
-        return view('edit');
+         if($model->where('id',$id)->delete())
+         {
+          return redirect()->to ('dashboard');
+         }
+         
+          
+        
+        
+
+      }
+    
+
+ 
+
+    
+
+
+
+    public function logout()
+    {
+      session()->destroy();
+      return redirect()->to ('/');
     }
 
 
