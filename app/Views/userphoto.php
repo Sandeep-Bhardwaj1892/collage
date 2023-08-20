@@ -8,7 +8,9 @@
 </head>
 
 <body>
-    photo
+    <div class="container">
+        <h1> photo</h1>
+    </div>
 </body>
 
 </html>
