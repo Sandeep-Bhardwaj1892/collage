@@ -57,10 +57,13 @@
       </li>
      
       <li class="nav-item">
-        <a class="nav-link " href="#">About</a>
+        <a class="nav-link " href="#">Abouts</a>
       </li>
       <li class="nav-item">
         <a class="nav-link " href="#">Contect us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="<?php echo base_url('dashboard');?>">dashboard</a>
       </li>
       
     </ul>

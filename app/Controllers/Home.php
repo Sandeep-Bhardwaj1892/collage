@@ -228,6 +228,7 @@ class Home extends BaseController
       $model = new SignupModel();
       $data['usersdata'] = $model->findAll();
       //print_r($data);
+     
         return view('dashboard',$data);
        
     }
@@ -265,6 +266,19 @@ class Home extends BaseController
        //print_r($data);
         return view('edit',$data);
     }
+
+
+
+
+
+
+   
+
+
+
+
+
+
    
 
 
