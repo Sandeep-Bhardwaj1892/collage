@@ -30,12 +30,12 @@
 
                 <div class="form-group">
                     <label class="text-dark" for="">Email ID</label>
-                    <input type="email" name="email" class="form-control" id="" placeholder="Enter email">
+                    <input type="email" name="email" class="form-control" id="" placeholder="Enter email" required>
                 </div>
 
                 <div class="form-group">
                     <label class="text-dark" for="">Password</label>
-                    <input type="password" name="password" class="form-control" id="" placeholder="Password">
+                    <input type="password" name="password" class="form-control" id="" placeholder="Password" required>
                 </div>
 
                 <button type="submit" class="btn btn-primary   ">Login</button>
